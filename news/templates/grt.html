@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    body {
+  margin: 1rem;
+  background: #444;
+  min-height: 200px;
+}
+
+#container {
+  border: 1px solid #ccc;
+  overflow: scroll;
+  width: 200px;
+}
+  #posts {
+    max-width: 300px;
+    min-height: 50px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+    a {
+      border: 1px solid white;
+      padding: 5px;
+      color: white;
+      margin: 5px;
+    }
+  
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+}
+</style>
+<script>
+        function slide(direction){
+        var container = document.getElementById('container');
+        scrollCompleted = 0;
+        var slideVar = setInterval(function(){
+        if(direction == 'left'){
+            container.scrollLeft -= 10;
+        } else {
+            container.scrollLeft += 10;
+        }
+        scrollCompleted += 10;
+        if(scrollCompleted >= 100){
+            window.clearInterval(slideVar);
+        }
+            }, 50);
+}
+</script>
+    </head>
+    <body>
+    
+        <section id="container">
+            <div id="posts">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 4</a>
+              <a href="#">Link 5</a>
+              <a href="#">Link 6</a>
+              <a href="#">Link 7</a>
+              <a href="#">Link 8</a>
+            </div>
+          </section>
+          
+          <br>
+          
+          <button type="button" onclick="slide('left')">Prev</button>
+          <button type="button" onclick="slide('right')">Next</button>
+          
+          <br>
+          <br>
+
+    </body>
+</html>
