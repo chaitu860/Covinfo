@@ -193,7 +193,23 @@ button {
 <br>
 <center><button type="button" onclick="slide('left')">Prev</button>
 <button type="button" onclick="slide('right')">Next</button></center>
-
+<h3>Covid tracker</h3>
+<table border="1px" class="table table-light"> 
+  <tr> 
+		{% for data in DataFrame %} 
+			<th>{{ data }}</th> 
+		{% endfor %} 
+ </tr>
+		{% for _, r in DataFrame.iterrows %} 
+    <tr>
+   <td>{{r.State}}</td>
+   <td>{{r.Cases}}</td>
+   <td>{{r.Active}}</td>
+   <td>{{r.Recovered}}</td>
+   <td>{{r.Deaths}}</td>
+		{% endfor %} 
+	</tr>
+</table> 
 
 
 

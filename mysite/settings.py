@@ -25,7 +25,7 @@ SECRET_KEY = 's8a)(1*ygzn-ho15v2w6$(5=i2g#^o5^s5#^*_y7&l@*p_-mzs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['covinfo1.herokuapp.com','127.0.0.1']
 
 
 # Application definition
