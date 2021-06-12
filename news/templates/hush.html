@@ -50,8 +50,8 @@
 #container {
   border: 1px solid #ccc;
   overflow: scroll;
-  width: 1700px;
-  height: 250px;
+  width: 786px;
+  height: 280px;
 }
   #posts {
     max-width: 300px;
@@ -109,7 +109,7 @@ button {
   </style>
   {% load static %}
 </head>
-<body class="bg-dark">
+<body style="background-color: black;">
   <!-- Button trigger modal -->
 
   <script>
@@ -130,54 +130,45 @@ button {
 }
 </script>
 
-<div ><center><img src='{% static "cov.PNG" %}'></center></div>
-<table class="table ">
-  <th>
-    <td>
-<div >
-  <br><br><br><br> <center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{vac}} </span></h3> </p><br><h5>Vaccine doses</h5></div></center>
+<div ><center><h2><span style="color: whitesmoke;"> Ｃｏｖｉｎｆｏ</span></h2></center></div>
+<div class="  row bg-dark">
+<div class="col">
+ <center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{vac}} </span></h3> </p><br><h5>Vaccine doses</h5></div></center>
  
     </div>
-  </td>
-</div>
-<td>
-<div>
-<br><br><br><br> <center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{neg}} </span></h3> </p><br><h5>Confirmed cases</h5> </div></center>
-</div>
-</td>
-<td>
-<div >
-    <br><br><br><br> <center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{death}} </span></h3> </p><br><h5>Deaths confirmed</h5> </div></center>
-</div>
-</td>
-</th>
-</table>
-<table class="table table-dark">
-  <th>
-    <td>
-      <div class="bg-dark" style="width: 40%;"><h1><span style="color: cornsilk;">COVID-19</span></h1></div>
-    </td>
-    <td>
-      <div class="bg-blue" style="width: 60%;"><h5>Precautions:</h5> 
-        <ol>
-          
-          
-          <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
-            <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
-              <li>Wear a mask when physical distancing is not possible.</li>
-                <li>Don’t touch your eyes, nose or mouth.</li>
-                  <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
-                    <li>Stay home if you feel unwell.</li>
-                    <li>If you have a fever, cough and difficulty breathing, seek medical attention.</li>
 
-        </ol>
-      </div>
-    </td>
-  </th>
-</table>
+
+<div class="col">
+<center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{neg}} </span></h3> </p><br><h5>Confirmed cases</h5> </div></center>
+</div>
+
+<div class="col">
+     <center><p> <div class="text-primary"><h3><span style="color: cornsilk;">{{death}} </span></h3> </p><br><h5>Deaths confirmed</h5> </div></center>
+</div>
+</div>
+<div class="row">
+      <div class="bg-danger col" style="width: 40%;"><h1><span style="color: cornsilk;">COVID-19</span></h1></div>
+      <div class="bg-dark col"><br><br><span style="color: lavenderblush;">COVID-19  is a disease caused by a new strain of coronavirus. 'CO' stands for corona, 'VI' for virus, and 'D' for disease. Formerly, this disease was referred to as '2019 novel coronavirus' or '2019-nCoV.'</span></div>
+      
+</div>
+<div class="row" style="background-color: black;" ><span style="color: cornsilk;"><h5>Precautions:</h5> 
+  <ol>
+    
+    <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li><br>
+      <li>Maintain a safe distance from anyone who is coughing or sneezing.</li><br>
+        <li>Wear a mask when physical distancing is not possible.</li><br>
+          <li>Don’t touch your eyes, nose or mouth.</li><br>
+            <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li><br>
+              <li>Stay home if you feel unwell.</li><br>
+              <li>If you have a fever, cough and difficulty breathing, seek medical attention.</li><br>
+            </span>
+  </ol>
+</div>
 
 <div ><center><h3><SPAN style="color: lavenderblush;">CORONA VIRUS NEWS-INDIA</SPAN></h3>></center></div>
+<center>
 <div id='container'>
+  
 <table class="table table-dark">
   <th>
   {% for it in usd %}
@@ -189,12 +180,17 @@ button {
   {%  endfor %}
 </th>
 </table>
+
 </div>
+</center>
 <br>
 <center><button type="button" onclick="slide('left')">Prev</button>
 <button type="button" onclick="slide('right')">Next</button></center>
 <h3 style="color: lavenderblush;">Covid tracker</h3>
-<table border="1px" class="table table-light"> 
+<div class="row">
+<div class="col">
+<table border="1px" class="table table-dark"> 
+  <span style="color: whitesmoke;">
   <tr> 
 		{% for data in DataFrame %} 
 			<th>{{ data }}</th> 
@@ -209,8 +205,10 @@ button {
    <td>{{r.Deaths}}</td>
 		{% endfor %} 
 	</tr>
-</table> 
-
+</span>
+</table>
+</div> 
+</div>
 
 
 </body>
