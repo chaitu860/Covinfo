@@ -56,9 +56,12 @@ def agr(request):
   p2=[] 
   p3=[]
   for i in dfs['Cases']:
-    k=i.index(' ')
+    if " " in i:
+        k=i.index(' ')
     
-    p1.append(i[:k])
+        p1.append(i[:k])
+    else:
+        p1.append(i)
   dfs['Cases']=p1
   for i in dfs['Recovered']:
     if " " in i:
